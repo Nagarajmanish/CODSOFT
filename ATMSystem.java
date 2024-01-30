@@ -4,13 +4,19 @@ class ATM
         public double amount = 50000.0;
         public void withdraw(double amount)
         {
+            if(this.amount<amount)
+            {
             this.amount-=amount;
             balance();
+            }
         }
         public void deposit(double amount)
         {
+            if(this.amount>amount)
+            {
             this.amount+=amount;
             balance();
+            }
         }
         public void balance()
         {
